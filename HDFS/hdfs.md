@@ -1,4 +1,6 @@
 ## Basics
+
+#### HDFS Basic Concepts
 - HDFS - distributed, fault tolerant, high throughput file system.
 - Hardware failure is a norm not an exception (on average, harddrive last for 3 years - 1/1000).
 - Streaming data access rather than interactive access by user.
