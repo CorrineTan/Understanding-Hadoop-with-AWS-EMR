@@ -77,4 +77,32 @@ ResourceManager Architecture: <br/>
 NodeManager Architecture: <br/>
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_nm_architecture.png">
 
+#### Application Start Up
+In YARN, 4 factors involved: <br/>
+- Job Submitter (Client) <br/>
+Client submits an application to RM <br/>
+- ResourceManager (Primary) <br/>
+Allocates a container <br/>
+- NodeManager (Secondary) <br/>
+RM contacts the related NM <br/>
+NM launches the container <br/>
+- Application Master (AM) <br/>
+The container stops the AM
+
+#### YARN container launch
+ResourceRequest: ```<resource-name, priority, resource-req, num of containers>``` <br/>
+AM presents the Container to the NM, on which it was allocated.<br/>
+AM uses the YARN container launch specification API which provides:<br/>
+- command line to launch the process within the container <br/>
+- environment variables <br/>
+- local resrouces neccesary on machine prior to launch (jars, shared-objects, auxiliary data files) <br/>
+- security related tokens <br/>
+
+#### YARN Locallization
+- ResourceLocalization
+- DeletionService
+- LocalCache
+- YARN.nodemanager.local-dirs
+
+
 ## Explain application lifecycles
