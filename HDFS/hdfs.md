@@ -12,7 +12,7 @@
 $ hdfs dfs -ls / <br/>
 Usage: 
 For a file returns stat on the file with the following format: <br/>
-```permissions number_of_replicas userid groupid filesize modification_date modification_time filename ```
+```permissions number_of_replicas userid groupid filesize modification_date modification_time filename ```<br/>
 For a directory it returns list of its direct children as in Unix. A directory is listed as: <br/>
 ```permissions userid groupid modification_date modification_time dirname ```
 
