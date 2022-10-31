@@ -1,5 +1,5 @@
 ## Hadoop Overall CheatSheet
-![hadoop_cheatsheet(https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hadoop_cheatsheet.jpg)
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hadoop_cheatsheet.jpg" width="48">
 
 ## Hadoop HDFS Command Cheatsheet
 ![hadoop_hdfs_cheatsheet1(https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hadoop_hdfs_cs1.png)
