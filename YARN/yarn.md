@@ -51,12 +51,18 @@ Main components in YARN: ResourceManager and NodeManager
 
 ## How YARN manages and assigns resources
 
-Two hadoop agent in Hadoop1: <br/>
- - JobTracker
+#### Hadoop1 vs Hadoop2
+
+Two hadoop agents in Hadoop1: <br/>
+ - JobTracker <br/>
 Manages cluster resrouces and job scheduler <br/>
- - TaskTracker
+ - TaskTracker <br/>
 Per node agent, manage task 
 
+Drawback: too much burden on JobTracker
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_jobtracker_tasktracker.png">
+
+Hadoop1 vs Hadoop2:
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hadoop1_vs_hadoop2.png">
 
 ## Explain application lifecycles
