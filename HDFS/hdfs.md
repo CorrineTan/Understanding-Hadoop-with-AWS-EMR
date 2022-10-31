@@ -13,9 +13,14 @@ $ hdfs dfs -ls /
 
 ![hdfs_ls_command](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_ls_command.png)
 
+![hdfs_list_details](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_list_details.png)
+
 $ touch test.txt
+
 $ hdfs dfs -mkdir /user/dataset
+
 $ hdfs dfs -cp file://'pwd'/test.txt /user/dataset
+
 $ hdfs dfs -ls /user/dataset
 
 $ hdfs --loglevel DEBUG dfs -ls /user/dataset/text.txt
