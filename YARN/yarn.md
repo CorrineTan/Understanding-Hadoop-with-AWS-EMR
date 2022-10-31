@@ -70,4 +70,7 @@ Hadoop1 vs Hadoop2:
  - Node Manager - per node
 
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_rm.png">
+
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_rm_architecture.png">
+
 ## Explain application lifecycles
