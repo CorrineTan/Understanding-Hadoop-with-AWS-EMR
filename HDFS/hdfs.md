@@ -45,11 +45,27 @@ List of files, list of blocks of each file, list of DataNode for each block, Fil
 Metadata in Memory (no need for I/O). No demand paging of FS metadata.
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_architecture.png">
 
+Ohter Keypoints:
+1. Only the file system metadata is persisted to disk<br/>
+2. The mapping between the Blocks and DataNodes is never persisted to Disk<br/>
+3. Everytime a DataNodes starts, it advertised the blocks it has<br/>
+For example, if we have a DataNode with a 1TB data disk it will advertise: <br/>
+```hdfs Block Size = 64MB      1TB/64MB = 16384 blocks```
+
 ## HDFS Component - DataNode
 It actually stores the data in blocks.
 
-## Checkpointing
-## HDFS Journal
+## Checkpointing and HDFS Journal
+NameNode keeps the entries namespace image in RAM<br/>
+NameNode record changes to HDFS in a write-ahead log called the journal in its local native file system (EditLogs) <br/>
+The location of block replicas are not part of the persistent checkpoint<br/>
+The two fiels which maintain this metadata on Disk: FSImage, EditLogs(Journal)<br/>
+The inodes and the list of blocks that define the metadata of the name system are called "image"<br/>
+The FSImage is never changed by NameNode.
+
+NameNode Metadata layout: note that the "seen_txid" keeps the last transaction id of the last checkpoint:<br/>
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_nn_metadata.png">
+
 ## HDFS replication
 ## Read/write path in HDFS
 
