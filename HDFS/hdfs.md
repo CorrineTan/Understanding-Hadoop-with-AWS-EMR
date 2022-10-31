@@ -10,7 +10,7 @@
 
 #### HDFS Basic Commands
 $ hdfs dfs -ls / 
-![hdfs_ls_command](./Image/hdfs_ls_command.jpg)
+![hdfs_ls_command](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_ls_command.png)
 $ touch test.txt
 $ hdfs dfs -mkdir /user/dataset
 $ hdfs dfs -cp file://'pwd'/test.txt /user/dataset
