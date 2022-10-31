@@ -10,11 +10,9 @@
 
 #### HDFS Basic Commands
 $ hdfs dfs -ls / <br/>
-Usage: hdfs dfs -ls <args> 
-
+Usage: 
 For a file returns stat on the file with the following format: <br/>
 ```permissions number_of_replicas userid groupid filesize modification_date modification_time filename ```
-
 For a directory it returns list of its direct children as in Unix. A directory is listed as: <br/>
 ```permissions userid groupid modification_date modification_time dirname ```
 
@@ -36,6 +34,8 @@ Usage: shows the capacity, free, and used space of the filesystem<br/>
 $ hdfs dfsadmin -report <br/>
 Usage: outputs a brief report on the overall HDFS filesystem. It’s a useful command to quickly view how much disk is available, how many DataNodes are running, corrupted blocks etc. <br/>
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_dfsadmin_report.png">
+
+Or use HDFS NameNode Web UI to understand more details.
 
 ## HDFS Basics
 
