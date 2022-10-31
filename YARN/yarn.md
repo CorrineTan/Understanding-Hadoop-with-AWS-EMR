@@ -71,6 +71,10 @@ Hadoop1 vs Hadoop2:
 
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_rm.png">
 
+ResourceManager Architecture: <br/>
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_rm_architecture.png">
+
+NodeManager Architecture: <br/>
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_nm_architecture.png">
 
 ## Explain application lifecycles
