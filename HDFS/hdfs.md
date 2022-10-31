@@ -1,4 +1,4 @@
-## Basics
+## HDFS Basics
 
 #### HDFS Basic Concepts
 - HDFS - distributed, fault tolerant, high throughput file system.
