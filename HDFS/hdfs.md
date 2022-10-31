@@ -55,6 +55,9 @@ For example, if we have a DataNode with a 1TB data disk it will advertise: <br/>
 ## HDFS Component - DataNode
 It actually stores the data in blocks.
 
+File Splits - blocks
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_blocks.png">
+
 ## Checkpointing and HDFS Journal
 NameNode keeps the entries namespace image in RAM<br/>
 NameNode record changes to HDFS in a write-ahead log called the journal in its local native file system (EditLogs) <br/>
@@ -67,5 +70,15 @@ NameNode Metadata layout: note that the "seen_txid" keeps the last transaction i
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_nn_metadata.png">
 
 ## HDFS replication
+Each block replica on DataNode has two files in local native file system: <br/>
+1st file: contains data itself <br/>
+2nd file: records the block's metadata<br/>
+HAR files - Hadoop-Archive is to mitigate the small file problem
+
+Replication: default: 1 - < 4 nodes, 2 - < 10 nodes, 3 for other cases: <br/>
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_blocks_replication.png">
+
+Changing dfs.replicaiton doesn't gonna change the files already in hdfs. Change replication at file level: "-Ddfs.replication". To change replication of an exsiting file: use "setrep" command
+
 ## Read/write path in HDFS
 
