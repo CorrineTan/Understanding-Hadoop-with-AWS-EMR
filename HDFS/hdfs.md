@@ -8,6 +8,15 @@
 - Simple Coherency Model - write-once-read-many access model, and read is always sequencial.
 - Moving computation is cheaper than moving data.
 
+#### HDFS Basic Commands
+$ hdfs dfs -ls / 
+![hdfs_ls_command](./Image/hdfs_ls_command.jpg)
+$ touch test.txt
+$ hdfs dfs -mkdir /user/dataset
+$ hdfs dfs -cp file://'pwd'/test.txt /user/dataset
+$ hdfs dfs -ls /user/dataset
+
+$ hdfs --loglevel DEBUG dfs -ls /user/dataset/text.txt
 
 ## HDFS Basics
 
