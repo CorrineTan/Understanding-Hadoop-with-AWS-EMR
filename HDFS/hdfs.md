@@ -81,4 +81,26 @@ Replication: default: 1 - < 4 nodes, 2 - < 10 nodes, 3 for other cases: <br/>
 Changing dfs.replicaiton doesn't gonna change the files already in hdfs. Change replication at file level: "-Ddfs.replication". To change replication of an exsiting file: use "setrep" command
 
 ## Read/write path in HDFS
+#### HDFS Write 
+Sequence of Communication<br/>
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_write.png">
 
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_write_dn.png">
+
+Write Process:<br/>
+ - HDFS client write data into cache, when it reaches HDFS block size, the HDFS Client contacts the NameNode
+ - NameNode inserts the filenames into its hierarchy, allocate a DataNode for the block and replicas
+ - DataNode form a pipeline in the order to minimize the total network distance 
+ - Client put data from its memory to DataNodes, data is sent in 4KB packets. Each data packet is acknowledged, but client can continue to send data without waiitng for ACKs
+ - After finish pushing all pakcets to DataNodes and obtained ACKs for all packets, the client tells the NameNode that block is written and closed
+ - NameNode commits the file creation and log in the journal. If the NameNode dies before the file is close, the file is lost
+
+#### HDFS Read
+Sequence of Communication<br/>
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_read.png">
+
+Read Process:<br/>
+ - Client program requests for data from the NameNode using filename
+ - NameNode returns the block location on the DataNodes
+ - Client then accesses each block individually
+ - Can have parallel access if on different nodes
