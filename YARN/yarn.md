@@ -49,3 +49,14 @@ It's running on port 8088 on the EMR primary node.
 
 Main components in YARN: ResourceManager and NodeManager
 
+## How YARN manages and assigns resources
+
+Two hadoop agent in Hadoop1: <br/>
+ - JobTracker
+Manages cluster resrouces and job scheduler <br/>
+ - TaskTracker
+Per node agent, manage task 
+
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/yarn_jobtracker_tasktracker.png">
+
+## Explain application lifecycles
