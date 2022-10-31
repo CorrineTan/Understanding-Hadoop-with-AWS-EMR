@@ -11,8 +11,7 @@
 #### HDFS Basic Commands
 $ hdfs dfs -ls / 
 
-Usage: hdfs dfs -ls <args>
-
+Usage: hdfs dfs -ls <args> <br/>
 For a file returns stat on the file with the following format: <br/>
 ```permissions number_of_replicas userid groupid filesize modification_date modification_time filename ```
 
