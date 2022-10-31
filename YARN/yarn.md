@@ -43,3 +43,9 @@ List Nodes and Resrouces: <br/>
 Viewing the YARN Application logs: <br/>
 ```$ yarn logs -applicationID application_1667175198378_0001``` <br/>
 
+#### Resource Manager WebUI
+Yarn Web UI: http://hadooptutorial.info/yarn-web-ui/ <br/>
+It's running on port 8088 on the EMR primary node.
+
+Main components in YARN: ResourceManager and NodeManager
+
