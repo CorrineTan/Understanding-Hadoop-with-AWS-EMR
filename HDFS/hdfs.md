@@ -27,7 +27,7 @@ $ hdfs dfs -ls /user/dataset<br/>
 $ hdfs --loglevel DEBUG dfs -ls /user/dataset/text.txt<br/>
 ![hdfs_cp_debug](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_cp_debug.png)
 
-$ hdfs dfs -df -h / <br/>
+$ hdfs dfs -df -h <br/>
 Usage: shows the capacity, free, and used space of the filesystem<br/>
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_df_h.png">
 
@@ -37,11 +37,17 @@ Usage: outputs a brief report on the overall HDFS filesystem. It’s a useful co
 
 Or use HDFS NameNode Web UI to understand more details.
 
-## HDFS Basics
-
-
 ## HDFS Component - NameNode
+It is the primary and it stores the namespace and block metadata to data node mappings.
+
+#### HDFS Metadata
+List of files, list of blocks of each file, list of DataNode for each block, File attributes(access time, replication factor). <br/>
+Metadata in Memory (no need for I/O). No demand paging of FS metadata.
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_architecture.png">
+
 ## HDFS Component - DataNode
+It actually stores the data in blocks.
+
 ## Checkpointing
 ## HDFS Journal
 ## HDFS replication
