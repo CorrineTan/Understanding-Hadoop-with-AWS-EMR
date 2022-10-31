@@ -9,9 +9,9 @@
 - Moving computation is cheaper than moving data.
 
 #### HDFS Basic Commands
-$ hdfs dfs -ls / 
+$ hdfs dfs -ls / <br/>
+Usage: hdfs dfs -ls <args> 
 
-Usage: hdfs dfs -ls <args> <br/>
 For a file returns stat on the file with the following format: <br/>
 ```permissions number_of_replicas userid groupid filesize modification_date modification_time filename ```
 
@@ -24,9 +24,11 @@ For a directory it returns list of its direct children as in Unix. A directory i
 
 $ touch test.txt<br/>
 $ hdfs dfs -mkdir /user/dataset<br/>
-$ hdfs dfs -cp file://'pwd'/test.txt /user/dataset<br/>
+$ hdfs dfs -cp file://`pwd`/test.txt /user/dataset<br/>
 $ hdfs dfs -ls /user/dataset<br/>
 $ hdfs --loglevel DEBUG dfs -ls /user/dataset/text.txt<br/>
+
+![hdfs_cp_debug](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_cp_debug.png)
 
 ## HDFS Basics
 
