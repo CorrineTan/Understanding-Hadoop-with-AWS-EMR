@@ -33,6 +33,10 @@ $ hdfs dfs -df -h / <br/>
 Usage: shows the capacity, free, and used space of the filesystem<br/>
 <img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_df_h.png">
 
+$ hdfs dfsadmin -report <br/>
+Usage: outputs a brief report on the overall HDFS filesystem. It’s a useful command to quickly view how much disk is available, how many DataNodes are running, corrupted blocks etc. <br/>
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_dfsadmin_report.png">
+
 ## HDFS Basics
 
 
