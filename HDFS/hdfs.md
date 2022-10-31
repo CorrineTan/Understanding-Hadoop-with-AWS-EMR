@@ -11,6 +11,16 @@
 #### HDFS Basic Commands
 $ hdfs dfs -ls / 
 
+Usage: hdfs dfs -ls <args>
+
+For a file returns stat on the file with the following format:
+
+```permissions number_of_replicas userid groupid filesize modification_date modification_time filename ```
+
+For a directory it returns list of its direct children as in Unix. A directory is listed as:
+
+```permissions userid groupid modification_date modification_time dirname ```
+
 ![hdfs_ls_command](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_ls_command.png)
 
 ![hdfs_list_details](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_list_details.png)
