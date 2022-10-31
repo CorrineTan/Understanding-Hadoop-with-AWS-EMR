@@ -27,8 +27,11 @@ $ hdfs dfs -mkdir /user/dataset<br/>
 $ hdfs dfs -cp file://`pwd`/test.txt /user/dataset<br/>
 $ hdfs dfs -ls /user/dataset<br/>
 $ hdfs --loglevel DEBUG dfs -ls /user/dataset/text.txt<br/>
-
 ![hdfs_cp_debug](https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_cp_debug.png)
+
+$ hdfs dfs -df -h / <br/>
+Usage: shows the capacity, free, and used space of the filesystem<br/>
+<img src="https://github.com/CorrineTan/Understanding-Hadoop-with-AWS-EMR/blob/main/Image/hdfs_df_h.png">
 
 ## HDFS Basics
 
